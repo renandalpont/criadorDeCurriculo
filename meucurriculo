@@ -1,0 +1,654 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="stylec.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Patua+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+</head>
+
+<body>
+
+  <div id="corpo">
+    <div id="informacao-de-contato">
+      <h2 id="cabecalho-informacao-contato">Informação de contato</h2>
+      <hr class="linha-informacao">
+      <h2 class="fonte-informacao-contato">E-mail</h2>
+      <?php echo $_GET['inputEmail'] ?>
+
+      <h2 class="fonte-informacao-contato">Endereço</h2>
+      <?php echo $_GET['inputRua'].", <br>" . $_GET['inputNumeroCasa'].", ". $_GET['inputBairro'].", <br>" . $_GET['inputCidade'].", " .$_GET['inputEstado']?>
+      <h2 class="fonte-informacao-contato">Telefone</h2>
+      <?php echo $_GET['inputTelefonePrincipal'] . "</br>" .$_GET['checkWhats']?>
+      </br>
+      <!-- <?php echo $_GET['inputTelefoneRecado'] . "</br>" .$_GET['checkWhats2']?> -->
+
+      <h2 class="fonte-informacao-contato">Data de nascimento</h2>
+      <?php echo $_GET['inputDataNascimento'] ?>
+      <h2 class="fonte-informacao-contato">Naturalidade</h2>
+      <?php echo $_GET['inputCidadeNascimento'] . "</br>" . $_GET['inputEstadoNascimento'] ?>
+      <h2 class="fonte-informacao-contato"><?php echo $_GET['inputRedeSocial']?></h2>
+      <a
+        href="<?php echo $_GET['inputLinkRedeSocial']?>"><?php echo $_GET['inputLinkRedeSocial']?></a>
+      <h2 id="cabecalho-informacao-contato">Habilidades</h2>
+      <hr class="linha-informacao">
+      <p><?php echo $_GET['inputHabilidades']?> </p>
+
+    </div>
+
+
+
+    <div id="conteudo">
+      <div id="cabecalho-conteudo">
+        <div id="resumo-perfil">
+          <!-- <a href="curriculo-pdf.pdf" target="_blank"> -->
+            <?php echo "<h1>" . $_GET['inputNome']. "</h1>" ?>
+          <!-- </a> -->
+          <h2 class="destaque-conteudo"><?php $_GET['inputSituacaoEmpregado']?></h2>
+          <p id="resumo-perfil"><?php echo $_GET['inputSobreMim']?></p>
+        </div>
+        <!-- <div id="foto-perfil"><img src="perfil.jpg" alt="foto-perfil"></div> -->
+      </div>
+
+      <hr class="linha-conteudo">
+
+      <div id="experiencias">
+        <h2 class="destaque-conteudo">Experiências</h2>
+
+        <div class="experiencia">
+          <div class=lado1>
+            <?php echo $_GET['inputCidadeEmpresa1']?><br>
+            <i><?php echo $_GET['inputInicioEmpresa1']." - ". $_GET['inputFimEmpresa1']?></i>
+          </div>
+          <!-- <hr class="linha-experiencia"> -->
+
+          <div class="lado2">
+            <h2 class="titulo-experiencia"><?php echo $_GET['inputCargoEmpresa1']?></h2>
+            <h2 class="destaque-conteudo"><?php echo $_GET['inputNomeEmpresa1']?></h2>
+            <?php echo $_GET['inputDescEmpresa1']?>
+          </div>
+        </div>
+
+        <div class="experiencia">
+          <div class=lado1>
+            <?php echo $_GET['inputCidadeEmpresa2']?><br>
+            <i><?php echo $_GET['inputInicioEmpresa2']." - ". $_GET['inputFimEmpresa2']?></i>
+          </div>
+          <!-- <hr class="linha-experiencia"> -->
+
+          <div class="lado2">
+            <h2 class="titulo-experiencia"><?php echo $_GET['inputCargoEmpresa2']?></h2>
+            <h2 class="destaque-conteudo"><?php echo $_GET['inputNomeEmpresa2']?></h2>
+            <?php echo $_GET['inputDescEmpresa2']?>
+          </div>
+        </div>
+
+        <div class="experiencia">
+          <div class=lado1>
+            <?php echo $_GET['inputCidadeEmpresa3']?><br>
+            <i><?php echo $_GET['inputInicioEmpresa3']." - ". $_GET['inputFimEmpresa3']?></i>
+          </div>
+          <!-- <hr class="linha-experiencia"> -->
+
+          <div class="lado2">
+            <h2 class="titulo-experiencia"><?php echo $_GET['inputCargoEmpresa3']?></h2>
+            <h2 class="destaque-conteudo"><?php echo $_GET['inputNomeEmpresa3']?></h2>
+            <?php echo $_GET['inputDescEmpresa3']?>
+          </div>
+        </div>
+
+        <!-- <div class="experiencia">
+          <div class=lado1>
+            Foz do Iguaçu, Brasil<br>
+            <i>Janeiro 2018 - Outubro 2018</i>
+          </div>
+          <hr class="linha-experiencia">
+
+          <div class="lado2">
+            <h2 class="titulo-experiencia">Gestor de Vendas em Varejo</h2>
+            <h2 class="destaque-conteudo">Damyller Confecções LTDA</h2>
+            Gestor de equipe com foco em metas.<br>
+            Recrutamento. Treinamento.
+          </div>
+        </div> -->
+      </div>    
+
+      <hr class="linha-conteudo">
+
+      <div id="educacao">
+        <h2 class="destaque-conteudo">Educação</h2>
+
+        <div class="educacao-lista">
+          <div class="lado2">
+            <h2 class="titulo-experiencia"><?php echo $_GET['inputEscolaridade']?></h2>
+            <h2 class="destaque-conteudo"><?php echo $_GET['inputInstituicao']?></h2>
+              <?php echo $_GET['inputDescCurso']?>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+  
+
+</body>
+
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Currículo | Gratis</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+  <h1>Crie <br>Seu Currículo<br></h1>
+  <h1 id="gratis"> <b>Grátis</b></h1>
+
+  <form method="GET" action="curriculo.php">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-12 text-center mt-sm-5 ">
+          <h2 class="display-6">Informações de contato</h2>
+        </div>
+      </div>
+
+      <div class="row justify-content-center mb-3">
+
+        <div class="col-sm-12 col-md-10 col-lg-8">
+          <!-- <form> -->
+
+          <div class="row">
+
+            <div class="form-group">
+              <label for="inputNome">Nome</label>
+              <input type="text" name="inputNome" class="form-control" id="inputNome" placeholder="Seu nome...">
+            </div>
+
+            <div class="form-group">
+              <label for="inputEmail">E-mail</label>
+              <input type="email" name="inputEmail" class="form-control" id="inputEmail" placeholder="Seu e-mail...">
+            </div>
+
+            <div class="form-group col-md-4">
+              <label for="inputTelefonePrincipal">Telefone</label>
+              <input type="tel" name="inputTelefonePrincipal" class="form-control" id="inputTelefonePrincipal"
+                placeholder="Ex: 48 99999-9999">
+
+            </div>
+
+            <div class="form-group col-md-2 pt-4">
+              <div class="form-g=check">
+                <label class="form-check-label">
+                  <input class="form-check-input" name="checkWhats" type="checkbox" value="Possui WhatsApp">WhatsApp
+                </label>
+              </div>
+            </div>
+            <div class="form-group col-md-4">
+              <label for="inputTelefoneRecado">Telefone</label>
+              <input type="tel" name="inputTelefoneRecado" class="form-control" id="inputTelefoneRecado"
+                placeholder="Ex: 48 99999-9999">
+            </div>
+            <!-- <div class="form-group col-md-2 pt-4">
+              <div class="form-g=check">
+                <label class="form-check-label">
+                  <input class="form-check-input" name="checkWhats2" type="checkbox" value="Possui WhatsApp">WhatsApp
+                </label>
+              </div>
+            </div> -->
+            <!-- <div class="form-group col-md-2">
+                  <label for="inputLogradouro">Tipo de logradouro</label>
+                  <select id="inputLogradouro" class="form-control">
+                    <option selected>Escolha...</option>
+                    <option>Avenida</option>
+                    <option>Rua</option>
+                    <option>Estrada</option>
+                  </select>
+                </div> -->
+            <div class="form-group col-md-10">
+              <label for="inputRua">Endereço</label>
+              <input type="text" name="inputRua" class="form-control" id="inputRua" placeholder="Ex: Rua das Palmeiras">
+            </div>
+
+            <div class="form-group col-md-2">
+              <label for="inputNumeroCasa">Número</label>
+              <input type="number" name="inputNumeroCasa" class="form-control" id="inputNumeroCasa"
+                placeholder="Número">
+            </div>
+
+            <div class="form-group col-md-5">
+              <label for="inputBairro">Bairro</label>
+              <input type="text" name="inputBairro" class="form-control" id="inputBairro"
+                placeholder="Ex: Jardim das Esmeraldas">
+            </div>
+            <div class="form-group col-md-5">
+              <label for="inputCidade">Cidade</label>
+              <input type="text" name="inputCidade" class="form-control" id="inputCidade"
+                placeholder="Ex: Treze Tilhas">
+            </div>
+
+            <div class="form-group col-md-2">
+              <label for="inputEstado">Estado</label>
+              <select name="inputEstado" id="inputEstado" class="form-control">
+                <option selected>Escolha...</option>
+                <option value="AC">AC</option>
+                <option value="AL">AL</option>
+                <option value="AP">AP</option>
+                <option value="AM">AM</option>
+                <option value="BA">BA</option>
+                <option value="CE">CE</option>
+                <option value="DF">DF</option>
+                <option value="ES">ES</option>
+                <option value="GO">GO</option>
+                <option value="MA">MA</option>
+                <option value="MT">MT</option>
+                <option value="MG">MG</option>
+                <option value="PA">PA</option>
+                <option value="PB">PB</option>
+                <option value="PR">PR</option>
+                <option value="PE">PE</option>
+                <option value="PI">PI</option>
+                <option value="RR">RR</option>
+                <option value="RO">RO</option>
+                <option value="RJ">RJ</option>
+                <option value="RN">RN</option>
+                <option value="RS">RS</option>
+                <option value="SC">SC</option>
+                <option value="SP">SP</option>
+                <option value="SE">SE</option>
+                <option value="TO">TO</option>
+              </select>
+
+            </div>
+
+
+            <!-- </form> -->
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="row">
+        <div class="col-12 text-center mt-sm-3 ">
+          <h2 class="display-6">Sobre você</h2>
+        </div>
+      </div>
+      <div class="row justify-content-center mb-3">
+
+        <div class="col-sm-12 col-md-10 col-lg-8">
+          <!-- <form> -->
+
+          <div class="row">
+
+            <div class="form-group col-md-4">
+              <label for="inputDataNascimento">Data de nascimento</label>
+              <input type="date" name="inputDataNascimento" class="form-control" id="inputDataNascimento"
+                placeholder="Ex: 22/05/1998">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="inputCidadeNascimento">Naturalidade</label>
+              <input type="text" name="inputCidadeNascimento" class="form-control" id="inputCidadeNascimento"
+                placeholder="Ex: Curitiba">
+            </div>
+            <div class="form-group col-md-2">
+              <label for="inputEstadoNascimento">Estado</label>
+              <select id="inputEstadoNascimento" name="inputEstadoNascimento" class="form-control">
+                <option selected value="">Escolha...</option>
+                <option value="AC">AC</option>
+                <option value="AL">AL</option>
+                <option value="AP">AP</option>
+                <option value="AM">AM</option>
+                <option value="BA">BA</option>
+                <option value="CE">CE</option>
+                <option value="DF">DF</option>
+                <option value="ES">ES</option>
+                <option value="GO">GO</option>
+                <option value="MA">MA</option>
+                <option value="MT">MT</option>
+                <option value="MG">MG</option>
+                <option value="PA">PA</option>
+                <option value="PB">PB</option>
+                <option value="PR">PR</option>
+                <option value="PE">PE</option>
+                <option value="PI">PI</option>
+                <option value="RR">RR</option>
+                <option value="RO">RO</option>
+                <option value="RJ">RJ</option>
+                <option value="RN">RN</option>
+                <option value="RS">RS</option>
+                <option value="SC">SC</option>
+                <option value="SP">SP</option>
+                <option value="SE">SE</option>
+                <option value="TO">TO</option>
+              </select>
+            </div>
+
+            <div class="form-group col-md-4">
+              <label for="inputSituacaoEmpregado">Situação atual</label>
+              <select id="inputSituacaoEmpregado" name="inputSituacaoEmpregado" class="form-control">
+                <option selected value="">Escolha...</option>
+                <option value="Empregado">Empregado</option>
+                <option value="Desempregado">Desempregado</option>
+                <option value="Recebendo auxílio">Recebendo auxílio</option>
+                <option value="Buscando primeiro emprego">Buscando primeiro emprego</option>
+              </select>
+
+            </div>
+
+            <div class="form-group col-md-2">
+              <label for="inputRedeSocial">Rede Social</label>
+              <select id="inputRedeSocial" name="inputRedeSocial" class="form-control">
+                <option selected value="">Escolha...</option>
+                <option value="Linkedin">Linkedin</option>
+                <option value="Facebook">Facebook</option>
+                <option value="Instagran">Instagran</option>
+                <option value="Twitter">Twitter</option>
+              </select>
+            </div>
+
+            <div class="form-group col-md-6">
+              <label for="inputLinkRedeSocial">Link para Rede Social</label>
+              <input type="url" name="inputLinkRedeSocial" class="form-control" id="inputLinkRedeSocial"
+                placeholder="Ex: facebook.com/MariaLuiza">
+            </div>
+
+            <div class="form-group">
+              <label for="inputSobreMim">Fale sobre o que você procura</label>
+              <textarea class="form-control" name="inputSobreMim" id="inputSobreMim" rows="3"
+                placeholder="Sobre mim..."></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="inputHabilidades">Habilidade</label>
+              <textarea class="form-control" name="inputHabilidades" id="inputHabilidades" rows="3"
+                placeholder="Cite seus pontos fortes..."></textarea>
+            </div>
+
+
+
+          </div>
+
+
+          <!-- </form> -->
+        </div>
+
+      </div>
+
+      <div class="row">
+        <div class="col-12 text-center mt-sm-3 ">
+          <h2 class="display-6">Experiência</h2>
+        </div>
+      </div>
+      <div class="row justify-content-center mb-3">
+
+        <div class="col-sm-12 col-md-10 col-lg-8">
+          <!-- <form> -->
+
+          <div class="row">
+
+            <div class="form-group col-md-6">
+              <label for="inputNomeEmpresa1">Nome da empresa</label>
+              <input type="text" name="inputNomeEmpresa1" class="form-control" id="inputNomeEmpresa1"
+                placeholder="Empresa que trabalhou...">
+            </div>
+
+            <div class="form-group col-md-6">
+              <label for="inputCidadeEmpresa1">Cidade</label>
+              <input type="text" name="inputCidadeEmpresa1" class="form-control" id="inputCidadeEmpresa1"
+                placeholder="Ex: Maresias, SP">
+            </div>
+
+            <div class="form-group col-md-6">
+              <label for="inputCargoEmpresa1">Cargo</label>
+              <input type="text" name="inputCargoEmpresa1" class="form-control" id="inputCargoEmpresa1"
+                placeholder="Seu cargo...">
+            </div>
+
+            <div class="form-group col-md-3">
+              <label for="inputInicioEmpresa1">Data entrada</label>
+              <input type="date" name="inputInicioEmpresa1" class="form-control" id="inputInicioEmpresa1">
+            </div>
+
+            <div class="form-group col-md-3">
+              <label for="inputFimEmpresa1">Data saída</label>
+              <input type="date" name="inputFimEmpresa1" class="form-control" id="inputFimEmpresa1">
+            </div>
+
+            <div class="form-group">
+              <label for="inputDescEmpresa1">Atividades</label>
+              <textarea class="form-control" name="inputDescEmpresa1" id="inputDescEmpresa1" rows="3"
+                placeholder="Descreva o que você fazia aqui..."></textarea>
+            </div>
+
+            <hr class="mt-sm-5" />
+
+            <div class=" form-group col-md-6">
+              <label for="inputNomeEmpresa2">Nome da empresa</label>
+              <input type="text" name="inputNomeEmpresa2" class="form-control" id="inputNomeEmpresa2"
+                placeholder="Empresa que trabalhou...">
+            </div>
+
+            <div class="form-group col-md-6">
+              <label for="inputCidadeEmpresa2">Cidade</label>
+              <input type="text" name="inputCidadeEmpresa2" class="form-control" id="inputCidadeEmpresa2"
+                placeholder="Ex: Maresias, SP">
+            </div>
+
+            <div class="form-group col-md-6">
+              <label for="inputCargoEmpresa2">Cargo</label>
+              <input type="text" name="inputCargoEmpresa2" class="form-control" id="inputCargoEmpresa2"
+                placeholder="Seu cargo...">
+            </div>
+
+            <div class="form-group col-md-3">
+              <label for="inputInicioEmpresa2">Data entrada</label>
+              <input type="date" name="inputInicioEmpresa2" class="form-control" id="inputInicioEmpresa2">
+            </div>
+
+            <div class="form-group col-md-3">
+              <label for="inputFimEmpresa2">Data saída</label>
+              <input type="date" name="inputFimEmpresa2" class="form-control" id="inputFimEmpresa2">
+            </div>
+
+            <div class="form-group">
+              <label for="inputDescEmpresa2">Atividades</label>
+              <textarea class="form-control" name="inputDescEmpresa2" id="inputDescEmpresa2" rows="3"
+                placeholder="Descreva o que você fazia aqui..."></textarea>
+            </div>
+
+
+            <hr class="mt-sm-5" />
+
+            <div class=" form-group col-md-6">
+              <label for="inputNomeEmpresa3">Nome da empresa</label>
+              <input type="text" name="inputNomeEmpresa3" class="form-control" id="inputNomeEmpresa3"
+                placeholder="Empresa que trabalhou...">
+            </div>
+
+            <div class="form-group col-md-6">
+              <label for="inputCidadeEmpresa3">Cidade</label>
+              <input type="text" name="inputCidadeEmpresa3" class="form-control" id="inputCidadeEmpresa3"
+                placeholder="Ex: Maresias, SP">
+            </div>
+
+            <div class="form-group col-md-6">
+              <label for="inputCargoEmpresa3">Cargo</label>
+              <input type="text" name="inputCargoEmpresa3" class="form-control" id="inputCargoEmpresa3"
+                placeholder="Seu cargo...">
+            </div>
+
+            <div class="form-group col-md-3">
+              <label for="inputInicioEmpresa3">Data entrada</label>
+              <input type="date" name="inputInicioEmpresa3" class="form-control" id="inputInicioEmpresa3">
+            </div>
+
+            <div class="form-group col-md-3">
+              <label for="inputFimEmpresa3">Data saída</label>
+              <input type="date" name="inputFimEmpresa3" class="form-control" id="inputFimEmpresa3">
+            </div>
+
+            <div class="form-group">
+              <label for="inputDescEmpresa3">Atividades</label>
+              <textarea class="form-control" name="inputDescEmpresa3" id="inputDescEmpresa1" rows="3"
+                placeholder="Descreva o que você fazia aqui..."></textarea>
+            </div>
+            <!-- <div class=" form-group col-md-6">
+              <label for="inputNomeEmpresa3">Nome da empresa</label>
+              <input type="text" class="form-control" id="inputNomeEmpresa1" placeholder="Empresa que trabalhou...">
+            </div>
+
+            <div class="form-group col-md-6">
+              <label for="inputCidadeEmpresa1">Cidade</label>
+              <input type="text" class="form-control" id="inputCidadeEmpresa1" placeholder="Ex: Maresias, SP">
+            </div>
+
+            <div class="form-group col-md-6">
+              <label for="inputCargoEmpresa1">Cargo</label>
+              <input type="text" class="form-control" id="inputCargoEmpresa1" placeholder="Seu cargo...">
+            </div>
+
+            <div class="form-group col-md-3">
+              <label for="inputInicioEmpresa1">Data entrada</label>
+              <input type="date" class="form-control" id="inputInicioEmpresa1">
+            </div>
+
+            <div class="form-group col-md-3">
+              <label for="inputFimEmpresa1">Data saída</label>
+              <input type="date" class="form-control" id="inputFimEmpresa1">
+            </div>
+
+            <div class="form-group">
+              <label for="inputDescEmpresa1">Atividades</label>
+              <textarea class="form-control" id="inputDescEmpresa1" rows="3"
+                placeholder="Descreva o que você fazia aqui..."></textarea>
+            </div> -->
+
+
+            <!-- </form> -->
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12 text-center mt-sm-3 ">
+            <h2 class="display-6">Educação</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center mb-3">
+
+          <div class="col-sm-12 col-md-10 col-lg-8">
+            <!-- <form> -->
+
+            <div class="row">
+
+              <div class="form-group">
+                <label for="inputEscolaridade">Grau de Escolaridade</label>
+                <select name="inputEscolaridade" id="inputEstado" class="form-control">
+                  <option selected value="">Escolha...</option>
+                  <option value="Ensino fundamental incompleto">Ensino fundamental incompleto</option>
+                  <option value="Ensino fundamental completo">Ensino fundamental completo</option>
+                  <option value="Ensino médio incompleto">Ensino médio incompleto</option>
+                  <option value="Ensino médio completo">Ensino médio completo</option>
+                  <option value="Ensino superior incompleto">Ensino superior incompleto</option>
+                  <option value="Ensino superior completo">Ensino superior completo</option>
+                  <option value="Ensino superior em andamento">Ensino superior em andamento</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="inputInstituicao">Instituição</label>
+                <input type="text" name="inputInstituicao" class="form-control" id="inputInstituicao"
+                  placeholder="Nome do último lugar que você estudou">
+              </div>
+              <div class="form-group">
+                <label for="inputDescCurso">Atividades desenvolvidas</label>
+                <textarea class="form-control" name="inputDescCurso" id="inputDescCurso"
+                  placeholder="Comentários sobre sua educação aqui..." rows="3"></textarea>
+              </div>
+            </div>
+
+            <div class="row">
+              <div><input class="btn btn-primary mt-3" type="submit" value="Gerar curriculo"></div>
+            </div>
+
+
+            <!-- </form> -->
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </form>
+</body>
+
+</html>
+{
+  "requires": true,
+  "lockfileVersion": 1,
+  "dependencies": {
+    "bootstrap": {
+      "version": "5.1.0",
+      "resolved": "https://registry.npmjs.org/bootstrap/-/bootstrap-5.1.0.tgz",
+      "integrity": "sha512-bs74WNI9BgBo3cEovmdMHikSKoXnDgA6VQjJ7TyTotU6L7d41ZyCEEelPwkYEzsG/Zjv3ie9IE3EMAje0W9Xew=="
+    },
+    "font-awesome": {
+      "version": "4.7.0",
+      "resolved": "https://registry.npmjs.org/font-awesome/-/font-awesome-4.7.0.tgz",
+      "integrity": "sha1-j6jPBBGhoxr9B7BtKQK7n8gVoTM="
+    }
+  }
+}
+
+h1 {
+  font-size: calc(4.375rem + 1.5vw);
+  background-color: #ff0101be;
+  color:#000;
+  padding: 0 0 0rem 1rem;
+  margin: 0;
+}
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 8rem;
+    background-color: #ff0101be;
+    color:#000;
+    padding: 0 0 0rem 1rem;
+    margin: 0;
+
+  }
+}
+
+#gratis {
+  font-size: calc(4.375rem + 1.5vw);
+  background-color: #ff0101be;
+  color:#fff;
+  padding: 0 0 5rem 3rem;
+
+}
+@media (min-width: 1200px) {
+  #gratis {
+    font-size: 8rem;
+    background-color: #ff0101be;
+    color: #fff;
+    padding: 0 0 5rem 3rem;
+
+  }
+}
